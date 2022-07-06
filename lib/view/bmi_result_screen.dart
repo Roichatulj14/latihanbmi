@@ -1,9 +1,12 @@
-import 'package:bmi/constants/constant.dart';
 import 'package:bmi/view/bmi_data_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:bmi/constants/constant.dart';
 
 class BmiResultScreen extends StatelessWidget {
-  const BmiResultScreen({Key? key, required this.bmi}) : super(key: key);
+  const BmiResultScreen({
+    Key? key,
+    required this.bmi,
+  }) : super(key: key);
   final double bmi;
 
   String determindBmiCategory(bmiValue) {

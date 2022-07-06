@@ -100,8 +100,9 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                     value: height.toDouble(),
                     min: 80,
                     max: 200,
-                    thumbColor: Colors.red,
+                    thumbColor: Color.fromARGB(255, 101, 102, 99),
                     activeColor: Colors.white,
+                    inactiveColor: Colors.white,
                     onChanged: (value) {
                       height = value.toInt();
                       setState(() {});
@@ -143,7 +144,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                             color: Colors.white,
                           ),
                           shape: const CircleBorder(),
-                          fillColor: const Color(0xff212747),
+                          fillColor: Color.fromARGB(255, 70, 66, 105),
                           constraints: const BoxConstraints.tightFor(
                             width: 56,
                             height: 56,
@@ -153,6 +154,10 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                         RawMaterialButton(
                           onPressed: () {
                             weight -= 1;
+                            if (weight < 0) {
+                              weight = 0;
+                            }
+                            ;
                             setState(() {});
                           },
                           elevation: 0,
@@ -162,7 +167,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                             color: Colors.white,
                           ),
                           shape: const CircleBorder(),
-                          fillColor: const Color(0xff212747),
+                          fillColor: Color.fromARGB(255, 70, 66, 105),
                           constraints: const BoxConstraints.tightFor(
                             width: 56,
                             height: 56,
@@ -202,7 +207,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                             color: Colors.white,
                           ),
                           shape: const CircleBorder(),
-                          fillColor: const Color(0xff212747),
+                          fillColor: Color.fromARGB(255, 70, 66, 105),
                           constraints: const BoxConstraints.tightFor(
                             width: 56,
                             height: 56,
@@ -212,6 +217,10 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                         RawMaterialButton(
                           onPressed: () {
                             age -= 1;
+                            if (age < 0) {
+                              age = 0;
+                            }
+                            ;
                             setState(() {});
                           },
                           elevation: 0,
@@ -221,7 +230,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                             color: Colors.white,
                           ),
                           shape: const CircleBorder(),
-                          fillColor: const Color(0xff212747),
+                          fillColor: Color.fromARGB(255, 70, 66, 105),
                           constraints: const BoxConstraints.tightFor(
                             width: 56,
                             height: 56,
@@ -238,9 +247,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) {
-                  return BmiResultScreen(
-                    bmi: calculateBmi(),
-                  );
+                  return BmiResultScreen(bmi: calculateBmi());
                 }),
               );
             },
@@ -278,7 +285,7 @@ class BmiCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-          color: const Color(0xff272a4e),
+          color: Color.fromARGB(255, 109, 86, 194),
           borderRadius: BorderRadius.circular(15),
           border: Border.all(color: borderColor!),
         ),
