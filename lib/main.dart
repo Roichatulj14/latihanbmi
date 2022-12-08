@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ThemeData(
           primaryColor: Colors.white,
-          scaffoldBackgroundColor: Color.fromARGB(255, 21, 6, 53),
+          scaffoldBackgroundColor: const Color.fromARGB(255, 21, 6, 53),
           appBarTheme: const AppBarTheme(
               // #0A0E21
               backgroundColor: primaryColor),

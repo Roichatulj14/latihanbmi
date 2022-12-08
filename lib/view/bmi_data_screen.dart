@@ -100,7 +100,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                     value: height.toDouble(),
                     min: 80,
                     max: 200,
-                    thumbColor: Color.fromARGB(255, 101, 102, 99),
+                    thumbColor: const Color.fromARGB(255, 101, 102, 99),
                     activeColor: Colors.white,
                     inactiveColor: Colors.white,
                     onChanged: (value) {
@@ -144,7 +144,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                             color: Colors.white,
                           ),
                           shape: const CircleBorder(),
-                          fillColor: Color.fromARGB(255, 70, 66, 105),
+                          fillColor: const Color.fromARGB(255, 70, 66, 105),
                           constraints: const BoxConstraints.tightFor(
                             width: 56,
                             height: 56,
@@ -157,7 +157,6 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                             if (weight < 0) {
                               weight = 0;
                             }
-                            ;
                             setState(() {});
                           },
                           elevation: 0,
@@ -167,7 +166,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                             color: Colors.white,
                           ),
                           shape: const CircleBorder(),
-                          fillColor: Color.fromARGB(255, 70, 66, 105),
+                          fillColor: const Color.fromARGB(255, 70, 66, 105),
                           constraints: const BoxConstraints.tightFor(
                             width: 56,
                             height: 56,
@@ -207,7 +206,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                             color: Colors.white,
                           ),
                           shape: const CircleBorder(),
-                          fillColor: Color.fromARGB(255, 70, 66, 105),
+                          fillColor: const Color.fromARGB(255, 70, 66, 105),
                           constraints: const BoxConstraints.tightFor(
                             width: 56,
                             height: 56,
@@ -220,7 +219,6 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                             if (age < 0) {
                               age = 0;
                             }
-                            ;
                             setState(() {});
                           },
                           elevation: 0,
@@ -230,7 +228,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                             color: Colors.white,
                           ),
                           shape: const CircleBorder(),
-                          fillColor: Color.fromARGB(255, 70, 66, 105),
+                          fillColor: const Color.fromARGB(255, 70, 66, 105),
                           constraints: const BoxConstraints.tightFor(
                             width: 56,
                             height: 56,
@@ -285,7 +283,7 @@ class BmiCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-          color: Color.fromARGB(255, 109, 86, 194),
+          color: const Color.fromARGB(255, 109, 86, 194),
           borderRadius: BorderRadius.circular(15),
           border: Border.all(color: borderColor!),
         ),
